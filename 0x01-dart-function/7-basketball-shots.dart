@@ -1,5 +1,5 @@
-num getPoints(Map team) {
-  num points = 0;
+int getPoints(Map<String, int> team) {
+  int points = 0;
   team.forEach((key, value) {
     if (key == 'Free throws') {
       points += value;
@@ -12,9 +12,9 @@ num getPoints(Map team) {
   return points;
 }
 
-num whoWins(Map teamA, Map teamB) {
-  num teamAPoints = getPoints(teamA);
-  num teamBPoints = getPoints(teamB);
+int whoWins(Map<String, int> teamA, Map<String, int> teamB) {
+  int teamAPoints = getPoints(teamA);
+  int teamBPoints = getPoints(teamB);
   if (teamAPoints > teamBPoints) {
     return 1;
   } else if (teamAPoints < teamBPoints) {
