@@ -1,7 +1,7 @@
 class Password {
   String _password = '';
 
-  Password({password: String}) {
+  Password({password = String}) {
     this._password = password;
   }
 

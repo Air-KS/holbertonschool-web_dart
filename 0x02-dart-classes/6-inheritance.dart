@@ -7,7 +7,12 @@ class User extends Password {
   int? id;
   String user_password = '';
 
-  User({id: int, name: String, age: int, height: double, user_password: String})
+  User(
+      {id = int,
+      name = String,
+      age = int,
+      height = double,
+      user_password = String})
       : super(password: user_password) {
     this.id = id;
     this.name = name;
